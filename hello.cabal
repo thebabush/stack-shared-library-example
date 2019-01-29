@@ -1,0 +1,15 @@
+cabal-version:        >=2.0
+build-type:           Simple
+name:                 hello
+version:              0.1.0.0  
+
+library
+  default-language:     Haskell2010
+
+foreign-library hello
+  type:                 native-shared
+  other-modules:        Hello
+  build-depends:        base >= 4.8
+  hs-source-dirs:       src
+  c-sources:            cbits/hello.c
+  default-language:     Haskell2010
